@@ -1,22 +1,20 @@
-def push(val):
-    if top==maxsize-1:
-        print('overflow')
-    stack.append(val)
-    return stack
+class Stack():
+    def __init__(self):
+        self.items = []
 
-def pop():
-    k=stack[top]:
-    stack.pop()
-    top=top-1
-    return k
+    def push(self, item):
+        self.items.append(item)
+        print('stack : ', self.items)
 
+    def pop(self):
+        return self.items.pop()
 
-maxsize=10
-top=-1
-stack=[]
-print('top',top,'maxsize',maxsize)
-while top!=maxsize-1:
-    top+=1
-    val=input("Enter the value to insert in stack: ")
-    a=push(val)
-    print(a)
+    def is_empty(self):
+        return self.items == []
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+
+    def get_stack(self):
+        return self.items

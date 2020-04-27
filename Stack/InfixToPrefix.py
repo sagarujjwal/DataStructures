@@ -1,5 +1,11 @@
-stack=[]
 
+# W.A.P to find Prefix Notation from Infix Notation
+# Infix Notation:- '(a-b/c)*(a/k-l)'
+# Postfix Notation:- lka/-cb/a-*
+# Prefix Notation:- *-a/bc-/akl
+
+
+stack=[]
 def push(symbol):
     global stack
     stack.append(symbol)
