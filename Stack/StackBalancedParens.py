@@ -33,7 +33,10 @@ def is_paren_balanced(paren_string):
                     is_balanced = False
         index+=1
 
-    if s.is_empty and is_balanced:
+    if s.is_empty() and is_balanced:
         return True
+    else:
+        return False
 
-print(is_paren_balanced('([{(){}()}])'))
+#print(is_paren_balanced('([{(){}()}])'))
+print(is_paren_balanced('[{(){}{}]'))
