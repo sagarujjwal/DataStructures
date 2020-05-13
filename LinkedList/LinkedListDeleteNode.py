@@ -1,4 +1,8 @@
 # Python program to delete a node from linked list
+# To delete a node from linked list, we need to do following steps.
+# 1) Find previous node of the node to be deleted.
+# 2) Change the next of previous node.
+# 3) Free memory for the node to be deleted.
 
 class Node:
     #Counstructor to initialize the node object
@@ -19,6 +23,7 @@ class LinkedList:
 
     #delete the first occurence of the key in the LinkedList
     def deleteNode(self, key):
+        #import ipdb; ipdb.set_trace()
         # store head Node
         temp = self.head
         # If head node itself holds the key to be deleted
@@ -61,5 +66,8 @@ llist.push(2)
 print("created list is : ")
 llist.printList()
 llist.deleteNode(1)
-print ("\nLinked List after Deletion of 1:")
+print ("\nLinked List after Deletion 1 :")
+llist.printList()
+llist.deleteNode(3)
+print ("\nLinked List after Deletion 3:")
 llist.printList()
