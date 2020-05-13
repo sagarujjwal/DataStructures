@@ -14,10 +14,9 @@ class LinkedList:
 
 
     def getCountRec(self, node):
-        if (not node):
+        if not node:
             return 0
-        else:
-            return 1 + self.getCountRec(node.next)
+        return 1 + self.getCountRec(node.next)
 
     def getCount(self):
         return self.getCountRec(self.head)
@@ -25,7 +24,7 @@ class LinkedList:
     def printList(self):
         temp = self.head
         while temp:
-            print(temp.data)
+            print temp.data
             temp = temp.next
 
 
@@ -35,6 +34,6 @@ llist.push(1)
 llist.push(2)
 llist.push(3)
 llist.push(4)
-print 'Count of nodes is :',llist.getCount()
-print('Created list :')
+print 'Count of nodes is :', llist.getCount()
+print 'Created list :'
 llist.printList()
